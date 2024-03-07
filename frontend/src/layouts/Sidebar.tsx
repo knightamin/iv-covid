@@ -5,7 +5,13 @@ import { authService } from '../services/auth/auth.service';
 import { sidebarList } from '../utils/sidebarList';
 import { errorToast } from '../utils/toast';
 
-function MySidebar() {
+type Props = {
+    toggled: boolean;
+    setBroken: (broken: boolean) => void;
+    closeMenu: () => void;
+};
+
+function MySidebar({ toggled, setBroken, closeMenu }: Props) {
     const navigate = useNavigate();
     const data = localStorage.getItem('_user');
     let user = {} as UserResponse;
@@ -27,6 +33,10 @@ function MySidebar() {
 
     return (
         <Sidebar
+            toggled={toggled}
+            customBreakPoint="800px"
+            onBreakPoint={setBroken}
+            onBackdropClick={closeMenu}
             rootStyles={{
                 [`.${sidebarClasses.container}`]: {
                     backgroundColor: 'hsl(206, 70%, 96%)',
