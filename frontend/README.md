@@ -1,6 +1,31 @@
-# React + TypeScript + Vite
+# IV_CODE
 
-The frontend part of iv-code for fetching covid examinations from backend
+iv_Code is a website template for fetching covid examinations data from backend.
 
-for run project:
-dev mode: npm run dev or yarn dev
+## Installation
+
+Use the package manager [yarn](https://yarnpkg.com) or [npm](https://npmjs.com) to install packages.
+
+```bash
+yarn install
+```
+
+or
+
+```bash
+npm install
+```
+
+## Usage
+
+run project in development mode
+
+```bash
+yarn dev
+```
+
+or
+
+```bash
+npm run dev
+```
